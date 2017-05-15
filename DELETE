@@ -1,0 +1,11 @@
+<?php
+
+$u=$_POST["t1"];
+$p=$_POST["t2"];
+
+$conn=new mysqli($server,$user,$pw,$db);
+$sql= "DELETE FROM Admin WHERE Username='$u'";
+$conn->query($sql)===TRUE;
+
+
+$conn->close();
