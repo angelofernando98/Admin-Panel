@@ -1,0 +1,7 @@
+<?php
+$server="localhost";
+$user="root";
+$pw="";
+$db="signed";
+$conn=new mysqli($server,$user,$pw,$db);
+?>
