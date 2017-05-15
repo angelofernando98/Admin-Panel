@@ -1,4 +1,8 @@
 <?php
+
+$u=$_POST["t1"];
+$p=$_POST["t2"];
+
 $sql= "INSERT INTO Admin VALUES ('$u','$p')";
 $conn->query($sql)===TRUE;
 
