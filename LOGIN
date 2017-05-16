@@ -1,0 +1,20 @@
+<?php
+session_start();
+
+$conn=mysql_connect("localhost","root","") or die("Connection Failed");
+
+$rs=mysql_select_db("Library",$conn) or die("Database name not avalailable");
+
+$a=$_POST['t1'];
+$b=$_POST['t2'];
+
+$login="select * from users where Name=\"$a\" and Password=\"$b\"";
+$rs=mysql_query($login,$conn) or die("not connect");
+
+if(mysql_num_rows($rs)==1)
+{
+	$_SESSION['t1']=$_POST['t1'];
+	$retrievedid= $_GET['id'];
+	header('Location:'.$retrievedid);	
+}
+?>
